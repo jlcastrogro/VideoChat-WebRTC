@@ -11,7 +11,7 @@ A WebRTC video chat app with PeerJS.
 1. Clone repo
 2. Run `npm install` in `public` diectory
 3. Run `npm install` in `server` diectory
-4. Start server with `npm server.js` from `server` directory
+4. Start server with `npm start` from `server` directory
 5. Start client with (for example) `php -S localhost:3000` from client directory
 
 ## Use
