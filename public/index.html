@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VideoChat con WebRTC y PeerJS</title>
+    <!-- Client -side dependencies -->
+    <link rel="stylesheet" href="node_modules/picnic/releases/picnic.min.css">
+    <link rel="stylesheet" href="node_modules/picnic/releases/plugins.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="node_modules/peerjs/dist/peer.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+        <!-- Cámara remota -->
+        <div id="camara-remota" class="camara">
+            <video width="400" height="400" autoplay></video>
+        </div>
+        <div id="contenedor">
+                <h1>VideoChat</h1>
+                <!-- Login -->
+                <div id="conectar">
+                    <h4>ID: <span id="id"></span></h4>
+                    <input type="text" id="nombre" placeholder="Nombre" autofocus>
+                    <input type="text" id="usuarioID" placeholder="ID">
+                    <div id="peerConectado" class="hidden">
+                        Peer Conectado: <span id="conectado"></span>
+                    </div>
+                    <button id="login">Entrar</button>
+                </div>
+                <div id="chat" class="hidden">
+                    <div id="contenedor-mensajes">
+                        <ul id="mensajes"></ul>
+                    </div>
+                    <div id="contenedor-mensaje">
+                        <input type="text" id="mensaje" placeholder="Mensaje.." autofocus>
+                        <button id="enviar">Enviar</button>
+                        <button id="videollamada">Videollamada</button>
+                    </div>
+                </div>
+        </div>
+        <!-- Mi cámara -->
+        <div id="mi-camara" class="camara">
+            <video width="400" height="400" autoplay></video>
+        </div>
+    <!-- Desplegar mensajes con handlebars -->
+    <script id="plantilla" type="text/x-handlebars-template">
+        {{#each mensajes}}
+        <li>
+            <span class="desde">{{desde}}:</span> {{texto}}
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

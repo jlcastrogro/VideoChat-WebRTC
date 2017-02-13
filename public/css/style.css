@@ -1,0 +1,69 @@
+body {
+  background-color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding-left: 30px;
+  background-color: #E6E6E6;
+}
+
+.camara {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #adc;
+  box-shadow: 0 0 10px #ccc;
+}
+
+#contenedor {
+  width: 400px;
+}
+
+#conectar {
+  background-color: #fff;
+  padding: 20px;
+}
+
+#contenedor-mensaje {
+  padding: 20px;
+  background-color: #ccc;
+}
+
+ul#mensajes {
+
+}
+#contenedor>h1 {
+  text-align: center;
+}
+#mensaje {
+  width: 330px;
+}
+
+span.desde {
+  font-weight: bold;
+}
+
+#contenedor-mensajes {
+  background-color: #fff;
+  text-align: left;
+  max-height: 225px;
+  min-height: 225px;
+  overflow-y: auto;
+}
+
+ul#mensajes li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+input[type=text] {
+  margin-bottom: 10px;
+}

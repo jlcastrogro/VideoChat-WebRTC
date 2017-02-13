@@ -1,0 +1,11 @@
+{
+  "name": "VideoChat-server",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "nodemon": "^1.11.0",
+    "peer": "^0.2.8"
+  }
+}
